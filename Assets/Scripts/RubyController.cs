@@ -80,7 +80,7 @@ public class RubyController : MonoBehaviour
             isInvincible = true;
             invincibleTimer = timeInvincible;
             animator.SetTrigger("Hit");
-            OnHit.Play();
+            //OnHit.Play(); This doesn't make the animation play despite the documentation seems to be confirming my guess 
         }
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
